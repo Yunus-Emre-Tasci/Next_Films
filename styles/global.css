@@ -10,6 +10,10 @@ body{
     grid-template-rows: 96px auto 72px;
 }
 
+div[data-nextjs-scroll-focus-boundary] {
+  height: 100%;
+}
+
 .container > *{
     grid-column: 2;
 }
