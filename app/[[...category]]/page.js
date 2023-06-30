@@ -2,7 +2,13 @@ import HomeContainer from '@/containers/home'
 import React from 'react'
 import Movies from "@/mocks/movies.json"
 
-const HomePage = ({params}) => {
+async function Delay(ms){
+    return new Promise(resolve=>setTimeout(resolve,ms))
+}
+
+
+const HomePage = async({params}) => {
+    await Delay(20000)
     let selectedCategory;
     if(params.category?.length>0){
         selectedCategory=true
