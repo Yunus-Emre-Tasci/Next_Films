@@ -6,14 +6,14 @@ import {
     notFound
 } from "next/navigation"
 
-async function Delay(ms){
-    return new Promise(resolve=>setTimeout(resolve,ms))
-}
+// async function Delay(ms){
+//     return new Promise(resolve=>setTimeout(resolve,ms))
+// }
 
 async function MoviePage({
     params,searchParams
 }) {
-    await Delay(4000)
+    // await Delay(4000)
     console.log(params);
 
     const movieDetail = Movies.results.find(movie => movie.id.toString() === params.id)
