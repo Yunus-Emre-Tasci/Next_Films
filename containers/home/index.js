@@ -8,26 +8,32 @@ import {
 } from '@/components/movies-section'
 
 const HomeContainer = ({
-    selectedCategory
+    selectedCategory, popularMovies, topRatedMovies,
+      categories,
   }) => {
   return (
     <div>
         <FeaturedMovie movie={Movies.results[0]}/>
-        <Categories categories={Genres.genres.slice(0,5)}/>
+        < Categories categories = {
+          categories.slice(1, 6)
+        }
+        />
         {
-          selectedCategory.movies.length > 0 && < MoviesSection title = {Genres.genres.find(i=>`${i.id}`===selectedCategory.id).name}
+          selectedCategory.movies.length > 0 && < MoviesSection title = {
+            categories.find(i => `${i.id}` === selectedCategory.id)?.name
+          }
           movies = {
-            selectedCategory.movies
+            selectedCategory.movies.slice(1, 7)
           }
           />}
         <MoviesSection title = "Popular Films"
         movies = {
-            Movies.results.slice(1,7)
+            popularMovies.slice(1, 7)
         }
         />
         < MoviesSection title = "Your Favorites"
         movies = {
-            Movies.results.slice(7,13)
+            topRatedMovies.slice(1,7)
         }
         />
     </div>
