@@ -19,5 +19,5 @@ function Categories({ categories }) {
   );
 }
 
-// export { CategoriesLoading } from "./loading";
+export { CategoriesLoading } from "./loading";
 export { Categories };

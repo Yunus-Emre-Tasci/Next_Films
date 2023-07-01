@@ -26,5 +26,5 @@ function MoviesSection({ title, movies }) {
   );
 }
 
-// export { MoviesSectionLoading } from "./loading";
+export { MoviesSectionLoading } from "./loading";
 export { MoviesSection };

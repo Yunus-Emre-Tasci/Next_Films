@@ -28,7 +28,7 @@
 // export default HomePage
 
 import React from "react";
-import { HomeContainer } from "@/containers/home";
+import  HomeContainer  from "@/containers/home";
 
 import {
   fetchPopularMovies,
